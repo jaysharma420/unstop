@@ -9,7 +9,7 @@ function App() {
     console.log(n);
     if(!/^[1-7]{1}$/.test(n))  {setans(); return seterr(`can book only 7 seats in one time`)}
     console.log(Number(val)+Number(n));
-    if(Number(val)+Number(n)>80) {setans(); return seterr(`only ${80-Number(val)+1} seats are available`)}
+    if(Number(val)+Number(n)>81) {setans(); return seterr(`only ${80-Number(val)+1} seats are available`)}
     let arr = []
     let i = 1
     while(i<=n){
@@ -33,7 +33,7 @@ function App() {
      <br></br>
      <button onClick={()=>booking(no)}>book seats</button><br></br>
      <button onClick={()=>remove()}>remove seats</button>
-     <div>{ans && ans.length>0 && <ul> {ans.map((value)=>(<li>{value}</li>))}</ul>}</div>
+     <div>{ans && ans.length>0 && <ul>registered seat numbers {ans.map((value)=>(<li>{value}</li>))}</ul>}</div>
      <div>{err}</div>
      </div>
  </>)
